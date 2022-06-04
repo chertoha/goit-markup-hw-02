@@ -2,7 +2,9 @@
   --primary-header-color: #212121;
   --primary-text-color: #757575;
   --accent-color: #2196f3;
-  --primary-background-color: #ffffff;
+  --secondary-light-color: #ffffff;
+  --secondary-dark-color: #000000;
+  --hover-button-color: #188ce8;
 }
 
 body {
@@ -20,7 +22,8 @@ body {
 }
 
 .link:hover,
-.link:focus {
+.link:focus,
+.link.current {
   color: var(--accent-color);
 }
 
@@ -29,13 +32,14 @@ body {
 }
 
 .btn {
+  font-family: inherit;
   cursor: pointer;
   border-radius: 4px;
   border: none;
 }
 
 .btn-primary {
-  color: #ffffff;
+  color: var(--secondary-light-color);
   background-color: var(--accent-color);
 }
 
@@ -46,6 +50,7 @@ body {
 
 .title {
   color: var(--primary-header-color);
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.17;
   text-align: center;
@@ -68,10 +73,10 @@ body {
 }
 
 .logo > .light {
-  color: #000000;
+  color: var(--secondary-dark-color);
 }
 .logo > .dark {
-  color: #ffffff;
+  color: var(--secondary-light-color);
 }
 
 .nav-list {
@@ -84,12 +89,13 @@ body {
 }
 
 .hero-title {
-  color: #ffffff;
+  color: var(--secondary-light-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .hero-button {
@@ -99,11 +105,17 @@ body {
   letter-spacing: 0.06em;
 }
 
+.hero-button:hover {
+  background-color: var(--hover-button-color);
+}
+
 /* Advantages */
 .features-list-title {
   color: var(--primary-header-color);
+  font-size: inherit;
   font-weight: 700;
   line-height: 1.14;
+  text-transform: uppercase;
 }
 
 .features-list-text {
@@ -116,7 +128,7 @@ body {
 }
 
 .staff-list li {
-  background-color: var(--primary-background-color);
+  background-color: var(--secondary-light-color);
 }
 
 .staff-name {
@@ -143,7 +155,7 @@ body {
 }
 
 .footer-address-text {
-  color: #ffffff;
+  color: var(--secondary-light-color);
   line-height: 1.71;
 }
 
@@ -166,7 +178,7 @@ body {
 }
 
 .portfolio-list li {
-  background-color: #ffffff;
+  background-color: var(--secondary-light-color);
 }
 
 .portfolio-list-title {
